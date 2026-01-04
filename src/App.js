@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
 import HeroSection from './components/HeroSection';
 import ActivityGrid from './components/ActivityGrid';
-import QuickStartGuide from './components/QucikStartGuide';
-import SwimmingStrokes from './components/SwimmingStrokes';
-import TeamShowcase from './components/TeamShowCase';
-import AcademicSection from './components/AcademicSection';
+import TeamShowcase from './components/TeamShowcase';
 import PremiumFooter from './components/PremiumFooter';
 import Acknowledgements from './components/Acknowledgements';
 import './styles/premium.css';
