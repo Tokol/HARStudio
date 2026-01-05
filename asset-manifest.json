@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/HARStudio/static/css/main.36f2b90f.css",
-    "main.js": "/HARStudio/static/js/main.0c71ae4e.js",
-    "static/media/ellen.jpeg": "/HARStudio/static/media/ellen.f13721507e261f589c2a.jpeg",
-    "static/media/suresh.png": "/HARStudio/static/media/suresh.cb0cb452ca3c0845283d.png",
-    "static/media/grp.png": "/HARStudio/static/media/grp.3caa45bbe22d43a73a99.png",
-    "static/media/jonas.jpeg": "/HARStudio/static/media/jonas.172c33a15f35aa62eafc.jpeg",
-    "index.html": "/HARStudio/index.html",
-    "main.36f2b90f.css.map": "/HARStudio/static/css/main.36f2b90f.css.map",
-    "main.0c71ae4e.js.map": "/HARStudio/static/js/main.0c71ae4e.js.map"
+    "main.css": "/harstudio/static/css/main.36f2b90f.css",
+    "main.js": "/harstudio/static/js/main.659c006f.js",
+    "static/media/ellen.jpeg": "/harstudio/static/media/ellen.f13721507e261f589c2a.jpeg",
+    "static/media/suresh.png": "/harstudio/static/media/suresh.cb0cb452ca3c0845283d.png",
+    "static/media/grp.png": "/harstudio/static/media/grp.3caa45bbe22d43a73a99.png",
+    "static/media/jonas.jpeg": "/harstudio/static/media/jonas.172c33a15f35aa62eafc.jpeg",
+    "index.html": "/harstudio/index.html",
+    "main.36f2b90f.css.map": "/harstudio/static/css/main.36f2b90f.css.map",
+    "main.659c006f.js.map": "/harstudio/static/js/main.659c006f.js.map"
   },
   "entrypoints": [
     "static/css/main.36f2b90f.css",
-    "static/js/main.0c71ae4e.js"
+    "static/js/main.659c006f.js"
   ]
 }
