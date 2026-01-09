@@ -625,24 +625,23 @@ const HeroSection = () => {
           
           .signal-wave {
             position: absolute;
-            top: 50%;
+            top: 0;
             left: 0;
             right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, 
-              transparent,
-              #FFD700,
-              transparent
-            );
-            animation: waveMove 2s linear infinite;
+            height: 100%;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='60' viewBox='0 0 160 60' fill='none' stroke='%23FFD700' stroke-width='2'><polyline points='0,30 10,30 18,18 26,42 34,12 42,48 50,30 62,30 70,24 78,36 86,16 94,44 102,30 116,30 124,20 132,40 140,26 148,34 160,30'/></svg>");
+            background-repeat: repeat-x;
+            background-position: 0 50%;
+            background-size: 160px 60px;
+            animation: waveMove 4s linear infinite;
           }
           
           @keyframes waveMove {
             0% {
-              transform: translateX(-100%);
+              background-position-x: 0;
             }
             100% {
-              transform: translateX(100%);
+              background-position-x: 160px;
             }
           }
           
@@ -850,7 +849,7 @@ const HeroSection = () => {
           /* Step 5: Analytics Grid */
           .analytics-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 10px;
           }
           
@@ -861,6 +860,7 @@ const HeroSection = () => {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             padding: 10px;
+            min-width: 0;
           }
           
           .metric-emoji {
@@ -870,6 +870,7 @@ const HeroSection = () => {
           .metric-details {
             display: flex;
             flex-direction: column;
+            min-width: 0;
           }
           
           .metric-value {

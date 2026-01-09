@@ -172,6 +172,7 @@ const ActivityGrid = () => {
 const ActivityCard = ({ activity }) => {
   const [hovered, setHovered] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const themeColors = {
     gold: {
@@ -212,12 +213,18 @@ const ActivityCard = ({ activity }) => {
     
     if (badge.type === "image" && badge.image && !imageError) {
       return (
-        <img 
-          src={badge.image} 
-          alt={badge.name}
-          className="badge-image"
-          onError={() => setImageError(true)}
-        />
+        <>
+          {!imageLoaded && <div className="badge-fallback">{badge.initials}</div>}
+          <img 
+            src={badge.image} 
+            alt={badge.name}
+            className={`badge-image ${imageLoaded ? 'is-loaded' : ''}`}
+            loading="lazy"
+            decoding="async"
+            onLoad={() => setImageLoaded(true)}
+            onError={() => setImageError(true)}
+          />
+        </>
       );
     } else if (badge.type === "emoji") {
       return <div className="badge-emoji">{badge.emoji}</div>;
@@ -348,6 +355,24 @@ const ActivityCard = ({ activity }) => {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .badge-image.is-loaded {
+          opacity: 1;
+        }
+
+        .badge-fallback {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 42px;
+          font-weight: 900;
+          color: #000;
+          text-transform: uppercase;
         }
 
         .badge-initials {
