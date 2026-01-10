@@ -20,7 +20,7 @@ const ActivityGrid = () => {
         { type: "download", label: "Download Dataset", description: "Professional 4-stroke swimming data", icon: "📥" },
         { type: "upload", label: "Upload Your Own", description: "Record and classify swimming activities", icon: "⬆️" }
       ],
-      toolLink: "https://swimmingactivitynovia.streamlit.app/",
+      toolLink: "https://noviaswimming.streamlit.app/",
       datasetLink: "https://drive.google.com/uc?export=download&id=1dKcxA0OxgR5ljTjhhHUSfKKeVRyJXOH6",
       hasDataset: true,
       badge: { 
